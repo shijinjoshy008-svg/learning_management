@@ -9,7 +9,7 @@ class User(AbstractUser):
         ('student','student')
     )
 
-ROLE=models.CharField(max_length=10,choices=ROLE_CHOICES,default='student')
+    ROLE=models.CharField(max_length=10,choices=ROLE_CHOICES,default='student')
 
 class Student(models.Model):
     User=models.OneToOneField(User,on_delete=models.CASCADE)
